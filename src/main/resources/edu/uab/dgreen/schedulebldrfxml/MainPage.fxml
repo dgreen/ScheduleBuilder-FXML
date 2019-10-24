@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.uab.dgreen.schedulebldrfxml.MainPageController">
+   <top>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="94.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="421.0" minWidth="10.0" prefWidth="406.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Path:" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Course:" GridPane.rowIndex="1" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Semester:" GridPane.rowIndex="2" />
+            <TextField fx:id="pathField" text="/Users/dgreen/Dropbox" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="courseField" text="333" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="semesterField" text="2018-4Fallx" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin></TextField>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="30.0" right="30.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </top>
+   <bottom>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Version 1.0fxml  20191022" />
+            <Label text="David G. Green dgreen@uab.ediu" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+   </bottom>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="196.0" minWidth="0.0" prefWidth="28.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="130.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="448.0" minWidth="10.0" prefWidth="402.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="1." />
+            <Label text="2." GridPane.rowIndex="1" />
+            <Label text="3." GridPane.rowIndex="2" />
+            <Label text="4." GridPane.rowIndex="3" />
+            <Label text="5." GridPane.rowIndex="4" />
+            <Label text="6." GridPane.rowIndex="5" />
+            <Button fx:id="createEditButton" mnemonicParsing="false" onAction="#createEditClicked" onDragDetected="#editTemplateClicked" prefWidth="110.0" text="Create/Edit" GridPane.columnIndex="1" />
+            <Button fx:id="editTemplateButton" mnemonicParsing="false" onAction="#editTemplateClicked" prefWidth="110.0" text="Edit/Template" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="mergeButton" mnemonicParsing="false" onAction="#mergeClicked" prefWidth="110.0" text="Merge" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="touchUpButton" mnemonicParsing="false" onAction="#touchUpClicked" prefWidth="110.0" text="Touch Up" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="viewButton" mnemonicParsing="false" onAction="#viewClicked" prefWidth="110.0" text="View" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button fx:id="exportHTMLButton" mnemonicParsing="false" onAction="#exportHTMLClicked" prefWidth="110.0" text="Export HTML" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="Create or modify schedule in Spreadsheet.  Export CSV" GridPane.columnIndex="2" />
+            <Label text="Edit Markdown template that will hold schedule" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label text="Merge CSV infomration into Template replacing old information" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label text="Optionally edit results if needed to apply any touch ups" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label text="View results in final form  after formatting" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label text="Create HTML version of schedule" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+   </center>
+   <padding>
+      <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</BorderPane>
