@@ -1,3 +1,9 @@
+/*
+ * File: App.java
+ * Author: David G. Green dgreen@uab.edu
+ * Assignment:  schedulebldrfxml - EE333 Fall 2019
+ * Vers: 1.0.1 10/28/2019 dgg - initial coding
+ */
 package edu.uab.dgreen.schedulebldrfxml;
 
 import javafx.application.Application;
@@ -17,6 +23,11 @@ public class App extends Application {
     private static Scene scene;
     private static Stage stage;
 
+    /**
+     * Read in FXML description and start the GUI
+     * @param stage - where to show
+     * @throws IOException - if there are IO problems
+     */
     @Override
     public void start(Stage stage) throws IOException {
         this.stage = stage;
@@ -32,6 +43,12 @@ public class App extends Application {
         scene.setRoot(loadFXML(fxml));
     }
     
+    /**
+     * Provide a reference to the stage
+     * 
+     * Added to support determining when stage gains focus
+     * @return stage
+     */
     protected static Stage getStage() {
         return stage;
     }
@@ -41,6 +58,10 @@ public class App extends Application {
         return fxmlLoader.load();
     }
 
+    /**
+     * Start here, launch (in side Application super class)
+     * @param args
+     */
     public static void main(String[] args) {
         launch();
     }

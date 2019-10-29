@@ -2,7 +2,7 @@
  * File: MainPageController.java
  * Author: David G. Green dgreen@uab.edu
  * Assignment:  schedulebldrfxml - EE333 Fall 2019
- * Vers: 1.0.0 10/22/2019 dgg - initial coding
+ * Vers: 1.0.1 10/28/2019 dgg - initial coding
  */
 package edu.uab.dgreen.schedulebldrfxml;
 
@@ -13,7 +13,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 
 /**
- *
+ * Handle the GUI that goes with MainPage.fxml
  * @author David G. Green dgreen@uab.edu
  */
 public class MainPageController extends BorderPane {
@@ -38,9 +38,15 @@ public class MainPageController extends BorderPane {
     @FXML private Button exportHTMLButton;
 
 
+    /**
+     * Construct the controller
+     */
     public MainPageController() {
     }
 
+    /**
+     * Initialize the controller (after it and the framework are established)
+     */
     @FXML
     public void initialize() {
         enableReadyButtons();
